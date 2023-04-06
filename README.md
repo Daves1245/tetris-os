@@ -55,6 +55,3 @@ Good luck. Maybe try dual booting with Linux if this doesn't work out :)
 ```
 
 If sound is broken or choppy, try running with  `> qemu-system-i386 -display sdl -drive format=raw,file=boot.img -audiodev id=dsound,driver=dsound,out.fixed-settings=on,out.frequency=22050,out.buffer-length=80000,timer-period=100 -device sb16,audiodev=dsound`
-
-#### Real hardware
-You probably know what you're doing if you're going to try this. Just burn `boot.img` onto some bootable media and give it a go. The SB16 is dynamically disabled in case it's not found or it's reset procedure fails, but if things continue to break try removing all references to sound or music first.
